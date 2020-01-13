@@ -7,6 +7,6 @@ export const HomeModel = {
 }
 
 async function getVersion () {
-  const { version } = packageJson
-  return { version }
+  const { name, description, version } = packageJson
+  return { name, description, version }
 }
