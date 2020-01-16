@@ -19,19 +19,21 @@ Routes.init = (app) => {
   // Custom Routes
   Routes.forEach(route => app.use(route.path, route.router))
 
-  // Default Route
+  // Final Route Pipeline
   app.use('*', (request, response, next) => {
-    const { method, originalUrl } = request
-    const message = `Cannot ${method} ${originalUrl}`
-    const error = new ResponseBody(404, message)
-    response.body = error
+    if (!request.isMatched) {
+      const { method, originalUrl } = request
+      const message = `Cannot ${method} ${originalUrl}`
+      const error = new ResponseBody(404, message)
+      response.body = error
+    }
 
     return sendResponse(request, response, next)
   })
 
   // Route Error Handler
   app.use((error, request, response, next) => {
-    if (!error) { return }
+    if (!error) { return process.nextTick(next) }
     console.log(error)
 
     let { statusCode = 500, message } = error

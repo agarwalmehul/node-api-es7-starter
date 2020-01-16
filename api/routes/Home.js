@@ -6,11 +6,9 @@ import { HomeController } from '../controllers'
 
 const HomeRouter = new Express.Router()
 const { healthCheck, getVersion } = HomeController
-const { sendResponse } = routerUtils
+const { routeSanity } = routerUtils
 
-HomeRouter.get('/health-check', healthCheck)
-HomeRouter.get('/version', getVersion)
-
-HomeRouter.use(sendResponse)
+HomeRouter.get('/health-check', routeSanity, healthCheck)
+HomeRouter.get('/version', routeSanity, getVersion)
 
 export { HomeRouter }

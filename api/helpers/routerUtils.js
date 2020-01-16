@@ -3,7 +3,8 @@
 import ResponseBody from './ResponseBody'
 
 const routerUtils = {
-  sendResponse
+  sendResponse,
+  routeSanity
 }
 
 export default routerUtils
@@ -17,4 +18,9 @@ function sendResponse (request, response, next) {
   }
 
   response.status(body.statusCode).json(body)
+}
+
+function routeSanity (request, response, next) {
+  request.isMatched = true
+  return process.nextTick(next)
 }
