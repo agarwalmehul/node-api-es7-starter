@@ -22,5 +22,5 @@ function sendResponse (request, response, next) {
 
 function routeSanity (request, response, next) {
   request.isMatched = true
-  return process.nextTick(next)
+  process.nextTick(next)
 }

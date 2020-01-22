@@ -3,9 +3,11 @@
 import http from 'http'
 
 export default class ResponseBody {
-  constructor (statusCode, message, data) {
+  constructor (statusCode, message, data, error) {
     this.statusCode = statusCode
-    this.message = message || http.STATUS_CODES[statusCode]
+    this.status = http.STATUS_CODES[statusCode]
+    this.message = message
     this.data = data
+    this.error = error
   }
 }

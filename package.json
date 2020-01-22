@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ip": "rm -rf node_modules && npm install"
+    "ip": "rm -rf node_modules && npm install",
+    "start": "nodemon server.js",
+    "generate-docs": "jsdoc -r . -d docs -c jsdoc.conf README.md"
   },
   "author": "Mehul Agarwal <agarwalmehul92@gmail.com>",
   "license": "ISC",
@@ -18,8 +20,12 @@
     "helmet": "^3.21.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-register": "^6.26.0"
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/register": "^7.8.3",
+    "jsdoc": "^3.6.3",
+    "nodemon": "^2.0.2"
   }
 }
