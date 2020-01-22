@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "init-test": "jest --init",
     "ip": "rm -rf node_modules && npm install",
     "start": "nodemon server.js",
     "generate-docs": "jsdoc -r . -d docs -c jsdoc.conf README.md"
@@ -25,6 +26,8 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "@babel/register": "^7.8.3",
+    "babel-jest": "^25.1.0",
+    "jest": "^25.1.0",
     "jsdoc": "^3.6.3",
     "nodemon": "^2.0.2"
   }

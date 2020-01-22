@@ -1,0 +1,1 @@
+global.rootDir = process.cwd()
