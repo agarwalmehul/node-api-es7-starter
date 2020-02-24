@@ -1,3 +1,7 @@
 'use strict'
 
-export * from './Home'
+import HomeController from './Home'
+
+export {
+  HomeController
+}

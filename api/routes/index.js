@@ -1,8 +1,7 @@
 'use strict'
 
 import { ResponseBody, routerUtils } from '../helpers'
-import packageJson from '../../package.json'
-import { HomeRouter } from './Home'
+import HomeRouter from './Home'
 
 const { sendResponse } = routerUtils
 

@@ -3,10 +3,12 @@
 import { asyncWrapper, ResponseBody } from '../helpers'
 import { HomeModel } from '../models'
 
-export const HomeController = {
+const HomeController = {
   healthCheck: asyncWrapper(healthCheck),
   getVersion: asyncWrapper(getVersion)
 }
+
+export default HomeController
 
 async function healthCheck (request, response, next) {
   if (response.body) { return process.nextTick(next) }

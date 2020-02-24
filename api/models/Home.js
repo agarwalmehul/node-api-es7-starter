@@ -2,9 +2,11 @@
 
 import packageJson from '../../package.json'
 
-export const HomeModel = {
+const HomeModel = {
   getVersion
 }
+
+export default HomeModel
 
 async function getVersion () {
   const { name, description, version } = packageJson

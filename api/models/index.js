@@ -1,3 +1,7 @@
 'use strict'
 
-export * from './Home'
+import HomeModel from './Home'
+
+export {
+  HomeModel
+}

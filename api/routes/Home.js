@@ -8,7 +8,7 @@ const HomeRouter = new Express.Router()
 const { healthCheck, getVersion } = HomeController
 const { routeSanity } = routerUtils
 
+export default HomeRouter
+
 HomeRouter.get('/health-check', routeSanity, healthCheck)
 HomeRouter.get('/version', routeSanity, getVersion)
-
-export { HomeRouter }
