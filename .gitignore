@@ -50,3 +50,6 @@ typings/
 
 # macOS custom file
 .DS_Store
+
+# Shell scripts
+*.sh
