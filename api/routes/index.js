@@ -1,12 +1,13 @@
 'use strict'
 
-import { ResponseBody, routerUtils } from '../helpers'
+import { ResponseBody, expressUtils } from '../helpers'
 import HomeRouter from './Home'
 
-const { sendResponse } = routerUtils
+const { middleware, resHandler } = expressUtils
+const { handleResponse } = resHandler
 
 const Routes = [
-  { path: '/', router: HomeRouter }
+  { path: '/home', router: HomeRouter }
 ]
 
 Routes.init = (app) => {
@@ -27,7 +28,7 @@ Routes.init = (app) => {
       response.body = error
     }
 
-    return sendResponse(request, response, next)
+    return handleResponse(request, response, next)
   })
 
   // Route Error Handler
@@ -45,7 +46,7 @@ Routes.init = (app) => {
     }
 
     response.body = responseBody
-    return sendResponse(request, response, next)
+    return handleResponse(request, response, next)
   })
 }
 

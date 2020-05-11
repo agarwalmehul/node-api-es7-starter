@@ -1,11 +1,11 @@
 'use strict'
 
-import { asyncWrapper, ResponseBody } from '../helpers'
+import { ResponseBody } from '../helpers'
 import { HomeModel } from '../models'
 
 const HomeController = {
-  healthCheck: asyncWrapper(healthCheck),
-  getVersion: asyncWrapper(getVersion)
+  healthCheck: healthCheck,
+  getVersion: getVersion
 }
 
 export default HomeController

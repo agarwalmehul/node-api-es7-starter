@@ -3,5 +3,7 @@ export BODY_LIMIT=5mb
 export ALLOW_CORS_ORIGIN=*
 export ALLOW_CORS_METHODS=OPTIONS,GET,POST,PUT,PATCH,DELETE
 
+export SERVICE_NAME=API_BOILERPLATE
+
 # cd /Path/to/project/root/directory/
 npm start
