@@ -1,7 +1,9 @@
 'use strict'
 
-import HomeController from './Home'
+import HealthController from './Health'
+import VersionController from './Version'
 
 export {
-  HomeController
+  HealthController,
+  VersionController
 }

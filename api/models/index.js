@@ -1,7 +1,9 @@
 'use strict'
 
-import HomeModel from './Home'
+import HealthModel from './Health'
+import VersionModel from './Version'
 
 export {
-  HomeModel
+  HealthModel,
+  VersionModel
 }

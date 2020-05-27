@@ -1,13 +1,15 @@
 'use strict'
 
 import { ResponseBody, expressUtils } from '../helpers'
-import HomeRouter from './Home'
+import HealthRouter from './Health'
+import VersionRouter from './Version'
 
 const { middleware, resHandler } = expressUtils
 const { handleResponse } = resHandler
 
 const Routes = [
-  { path: '/home', router: HomeRouter }
+  { path: '/health', router: HealthRouter },
+  { path: '/version', router: VersionRouter }
 ]
 
 Routes.init = (app) => {

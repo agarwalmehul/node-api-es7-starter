@@ -1,7 +1,7 @@
 {
   "name": "node-api-es7-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "NodeJS API Server Boilerplate",
   "main": "server.js",
   "scripts": {
     "test": "jest",
