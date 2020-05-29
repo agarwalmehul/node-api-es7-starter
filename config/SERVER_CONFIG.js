@@ -14,4 +14,4 @@ const SERVER_CONFIG = {
   ALLOW_CORS_METHODS
 }
 
-export { SERVER_CONFIG }
+export default SERVER_CONFIG
