@@ -53,3 +53,6 @@ typings/
 
 # Shell scripts
 *.sh
+
+# Certificate files
+*.pem
