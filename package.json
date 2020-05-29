@@ -14,7 +14,7 @@
   "license": "ISC",
   "homepage": "https://github.com/agarwalmehul/node-api-es7-starter.git",
   "dependencies": {
-    "@m92/express-utils": "0.0.58",
+    "@m92/express-utils": "0.0.68",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
