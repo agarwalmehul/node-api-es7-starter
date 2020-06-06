@@ -8,7 +8,9 @@
     "init-test": "jest --init",
     "ip": "rm -rf node_modules && npm install",
     "start": "nodemon server.js",
-    "generate-docs": "jsdoc -r . -d docs -c jsdoc.conf README.md"
+    "generate-docs": "jsdoc -r . -d docs -c jsdoc.conf README.md",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Mehul Agarwal <agarwalmehul92@gmail.com>",
   "license": "ISC",
@@ -18,7 +20,8 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "helmet": "^3.21.2"
+    "helmet": "^3.21.2",
+    "snyk": "^1.336.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -30,5 +33,6 @@
     "jest": "^25.1.0",
     "jsdoc": "^3.6.3",
     "nodemon": "^2.0.2"
-  }
+  },
+  "snyk": true
 }
