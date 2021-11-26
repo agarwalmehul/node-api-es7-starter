@@ -1,10 +1,11 @@
 'use strict'
 
 import { ResponseBody, expressUtils } from '../helpers'
+
 import HealthRouter from './Health'
 import VersionRouter from './Version'
 
-const { middleware, resHandler } = expressUtils
+const { resHandler } = expressUtils
 const { handleResponse } = resHandler
 
 const Routes = [
@@ -29,16 +30,14 @@ Routes.init = (app) => {
       const error = new ResponseBody(404, message)
       response.body = error
     }
-
     return handleResponse(request, response, next)
   })
 
   // Route Error Handler
   app.use((error, request, response, next) => {
     if (!error) { return process.nextTick(next) }
-    console.log(error)
 
-    let { statusCode = 500, message } = error
+    const { statusCode = 500, message } = error
     let responseBody
 
     if (error.constructor.name === 'ResponseBody') {
