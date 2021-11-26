@@ -26,9 +26,7 @@ const {
 } = process.env
 
 const REQUIRED_CONFIG = [
-  'SERVICE_NAME',
-  'AAUTH_ENDPOINT',
-  'AAUTH_API_KEY'
+  'SERVICE_NAME'
 ]
 
 REQUIRED_CONFIG.forEach(function (key) {
