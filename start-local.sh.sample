@@ -15,8 +15,8 @@ export AAUTH_API_KEY=
 #
 ##### Starting Server Locally
 # cd /Path/to/project/root/directory/
-npm start
+# npm start
 #
-##### Starting Server in PM2
+##### Starting Server using PM2
 # cd /Path/to/project/root/directory/
-node server.js
+# node server.js

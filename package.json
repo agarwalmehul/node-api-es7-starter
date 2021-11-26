@@ -4,31 +4,25 @@
   "description": "NodeJS API Server Boilerplate",
   "main": "server.js",
   "scripts": {
-    "test": "jest",
-    "init-test": "jest --init",
     "ip": "rm -rf node_modules && npm install",
-    "start": "nodemon server.js",
-    "generate-docs": "jsdoc -r . -d docs -c jsdoc.conf README.md"
+    "start": "nodemon server.js"
   },
   "author": "Mehul Agarwal <agarwalmehul92@gmail.com>",
   "license": "ISC",
   "homepage": "https://github.com/agarwalmehul/node-api-es7-starter.git",
   "dependencies": {
-    "@m92/express-utils": "0.0.68",
+    "@m92/express-utils": "0.0.92",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "helmet": "^3.21.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.8.3",
-    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
-    "@babel/preset-env": "^7.8.3",
-    "@babel/register": "^7.8.3",
-    "babel-jest": "^25.1.0",
-    "jest": "^25.1.0",
-    "jsdoc": "^3.6.3",
-    "nodemon": "^2.0.2"
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/register": "^7.16.0",
+    "nodemon": "^2.0.15"
   }
 }

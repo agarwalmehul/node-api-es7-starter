@@ -16,7 +16,6 @@ import {
   logger
 } from './expressUtils'
 
-
 export {
   ResponseBody,
   nanoid,
