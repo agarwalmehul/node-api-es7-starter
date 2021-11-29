@@ -13,6 +13,20 @@ export OAUTH_ENDPOINT=
 export AAUTH_ENDPOINT=
 export AAUTH_API_KEY=
 #
+export LOGGER_MODE=CONSOLE_VERBOSE
+export LOGGER_REQ_RES_LOG_ENABLED=true
+export LOGGER_REQ_RES_LOG_BODY_ENABLED=true
+export LOGGER_PROPS_STRNGIFIED=true
+#
+export DISABLE_CREDENTIAL_CRYPTOGRAPHY=true
+export DISABLE_PAYLOAD_CRYPTOGRAPHY=true
+export DISABLE_OAUTH=true
+export DISABLE_AAUTH=true
+#
+export HTTP_CLIENT_BODY_LOG_ENABLED=true
+#
+export TIMEZONE="Asia/Kolkata"
+#
 ##### Starting Server Locally
 # cd /Path/to/project/root/directory/
 # npm start
