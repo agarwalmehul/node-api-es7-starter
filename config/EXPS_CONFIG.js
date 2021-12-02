@@ -25,8 +25,6 @@ let {
   TIMEZONE = 'Asia/Kolkata'
 } = process.env
 
-console.log('process.env', process.env)
-
 const REQUIRED_CONFIG = [
   'SERVICE_NAME'
 ]
@@ -50,8 +48,6 @@ if (!DISABLE_AAUTH) {
   REQUIRED_CONFIG.push('AAUTH_ENDPOINT')
   REQUIRED_CONFIG.push('AAUTH_API_KEY')
 }
-
-console.log('REQUIRED_CONFIG', REQUIRED_CONFIG)
 
 REQUIRED_CONFIG.forEach(function (key) {
   if (!process.env[key]) {
