@@ -2,7 +2,7 @@
 
 import Express from 'express'
 import { expressUtils } from '../helpers'
-import { VersionController } from '../controllers'
+import VersionController from '../controllers/Version'
 
 const VersionRouter = new Express.Router()
 const { get } = VersionController

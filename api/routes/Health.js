@@ -2,7 +2,7 @@
 
 import Express from 'express'
 import { expressUtils } from '../helpers'
-import { HealthController } from '../controllers'
+import HealthController from '../controllers/Health'
 
 const HealthRouter = new Express.Router()
 const { get } = HealthController

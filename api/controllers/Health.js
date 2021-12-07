@@ -1,7 +1,7 @@
 'use strict'
 
 import { ResponseBody } from '../helpers'
-import { HealthModel } from '../models'
+import HealthModel from '../models/Health'
 
 const HealthController = {
   get

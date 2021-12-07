@@ -1,7 +1,7 @@
 'use strict'
 
 import { ResponseBody } from '../helpers'
-import { VersionModel } from '../models'
+import VersionModel from '../models/Version'
 
 const VersionController = {
   get
