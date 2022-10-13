@@ -4,13 +4,16 @@ import { ResponseBody, expressUtils } from '../helpers'
 
 import HealthRouter from './Health'
 import VersionRouter from './Version'
+import HandshakeRouter from './Handshake'
 
 const { resHandler } = expressUtils
 const { handleResponse } = resHandler
 
 const Routes = [
   { path: '/health', router: HealthRouter },
-  { path: '/version', router: VersionRouter }
+  { path: '/version', router: VersionRouter },
+
+  { path: '/handshake', router: HandshakeRouter }
 ]
 
 Routes.init = (app) => {
