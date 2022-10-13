@@ -1,10 +1,10 @@
 'use strict'
 
-import Express from 'express'
+import { Router } from 'express'
 import { expressUtils } from '../helpers'
 import HealthController from '../controllers/Health'
 
-const HealthRouter = new Express.Router()
+const HealthRouter = new Router()
 const { get } = HealthController
 
 const { reqHandler, resHandler } = expressUtils
