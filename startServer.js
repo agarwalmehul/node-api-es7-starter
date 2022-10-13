@@ -11,6 +11,9 @@ const startServer = async (app) => {
     // Initialise Api Crypto
     await apiCryptoInitialize(getKeyPairByClientId)
 
+    const a = await generateRsaKey()
+    console.log(JSON.stringify(a, null, 2))
+
     // Start Server
     await app.listen(PORT)
     console.log(`[Info] Server Started Successfully! Listening on Port: ${PORT}`)
@@ -20,8 +23,4 @@ const startServer = async (app) => {
   }
 }
 
-export default startServer;
-(async () => {
-  const a = await generateRsaKey()
-  console.log(JSON.stringify(a, null, 2))
-})()
+export default startServer
