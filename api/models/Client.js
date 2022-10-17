@@ -22,6 +22,6 @@ const ClientModel = {
 
 export default ClientModel
 
-async function getKeyPairByClientId (uniqueId) {
+async function getKeyPairByClientId(uniqueId) {
   return KEY_OBJECTS[uniqueId]
 }

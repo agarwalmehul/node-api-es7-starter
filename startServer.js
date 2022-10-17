@@ -1,18 +1,17 @@
 'use strict'
 
 import { SERVER_CONFIG } from './config'
-import { initialize as apiCryptoInitialize, generateRsaKey } from '@m92/api-crypto'
-import { getKeyPairByClientId } from './api/models/Client'
+import { initialize as apiCryptoInitialize, generateRsaKey, Crypto } from '@m92/api-crypto'
+import ClientModel from './api/models/Client'
 
 const { PORT } = SERVER_CONFIG
 
 const startServer = async (app) => {
   try {
     // Initialise Api Crypto
-    await apiCryptoInitialize(getKeyPairByClientId)
-
-    const a = await generateRsaKey()
-    console.log(JSON.stringify(a, null, 2))
+    await apiCryptoInitialize(ClientModel.getKeyPairByClientId)
+    // const keyPair = await generateRsaKey()
+    // console.log(JSON.stringify(keyPair, null, 2))
 
     // Start Server
     await app.listen(PORT)

@@ -8,7 +8,7 @@ const VersionModel = {
 
 export default VersionModel
 
-async function get () {
+async function get() {
   const { name, description, version } = packageJson
   return { name, description, version }
 }
