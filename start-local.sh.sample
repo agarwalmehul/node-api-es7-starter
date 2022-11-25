@@ -27,6 +27,20 @@ export HTTP_CLIENT_BODY_LOG_ENABLED=true
 #
 export TIMEZONE="Asia/Kolkata"
 #
+##### Api Crpto Config
+export API_CRYPTO_KMS_KEY_ID=''
+export API_CRYPTO_KMS_KEY_SPEC='RSA_2048'
+export API_CRYPTO_KMS_CIPHERTEXT_FORMAT='base64'
+export API_CRYPTO_REDIS_AUTH_ENABLED='false'
+export API_CRYPTO_REDIS_CHECK_SERVER_IDENTITY='false'
+export API_CRYPTO_REDIS_HOST='localhost'
+export API_CRYPTO_REDIS_PORT='6379'
+export API_CRYPTO_REDIS_KEY_PREFIX='api-crypto'
+export API_CRYPTO_REDIS_AUTH='false'
+export API_CRYPTO_KEY_CACHE_TTL_IN_DAYS='1'
+export API_CRYPTO_CLIENT_ID_HEADER_KEY='X-Client-ID'
+export API_CRYPTO_ENCRYPTION_KEY_HEADER_KEY='X-Encryption-ID'
+#
 ##### Starting Server Locally
 # cd /Path/to/project/root/directory/
 # npm start
